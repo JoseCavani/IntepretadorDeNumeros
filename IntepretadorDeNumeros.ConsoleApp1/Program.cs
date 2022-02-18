@@ -15,7 +15,6 @@ namespace IntepretadorDeNumeros.ConsoleApp1
 
     ";
             int contador = 0;
-            int contador2 = 0;
             System.IO.StringReader leitorDeCodigos = new System.IO.StringReader(entrada);
             string[] linhas = new string[4];
             linhas[0] = leitorDeCodigos.ReadLine();
@@ -68,7 +67,6 @@ namespace IntepretadorDeNumeros.ConsoleApp1
             //}
             //Console.WriteLine();
             #endregion
-            contador2++;
 
             #region codigo que ve qual numero é
             if (charParaLer2[0] == ' ' && charParaLer1[1] == ' ' && charParaLer2[3] == '|' && charParaLer3[3] == '|')
@@ -118,7 +116,7 @@ namespace IntepretadorDeNumeros.ConsoleApp1
 
           //  Console.WriteLine(); // habilitar se estiver debugando
 
-            if ((contador2 *4) < linhas[1].Length) // termino os numeros? senão vai pra cima denovo
+            if ((contador) < linhas[1].Length) // termino os numeros? senão vai pra cima denovo
             goto checkagem;
             #endregion
 
