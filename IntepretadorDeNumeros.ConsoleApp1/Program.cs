@@ -61,7 +61,7 @@ namespace IntepretadorDeNumeros.ConsoleApp1
 
 
             #region codigo para ver o que os charParaLer estao lendo habilitar para desbugar
-            //codigo para ver o que os charParaLer estao lendo
+            //codigo para ver o que o linhaParaLer estao lendo
             //Console.WriteLine(linhaParaLer);
 
 
