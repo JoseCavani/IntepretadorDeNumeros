@@ -12,17 +12,28 @@ namespace IntepretadorDeNumeros.ConsoleApp1
    | __| __||__||__ |__    ||__||__||  |
    ||__  __|   | __||__|   ||__| __||__|
 
-    ";
-            int contador = 0;
+     __  __      __  __  __  __  __  __ 
+   | __| __||__||__ |__    ||__||__||__|
+   ||__  __|   | __||__|   ||__| __| __|
+
+     __  __      __  __  __  __  __  __ 
+   | __| __||__||__ |__ |__ |__||__||__|
+   ||__  __|   | __||__| __||__| __| __|
+
+ ";
             System.IO.StringReader leitorDeCodigos = new System.IO.StringReader(entrada);
             string[] linhas = new string[4];
+        novo:
+            int contador = 0;
             linhas[0] = leitorDeCodigos.ReadLine();
             linhas[1] = leitorDeCodigos.ReadLine();
             linhas[2] = leitorDeCodigos.ReadLine();
             linhas[3] = leitorDeCodigos.ReadLine();
             string linhaParaLer = "";
 
-
+            if (linhas[3] == null)
+                goto fim;
+            
 
 
 
@@ -125,7 +136,7 @@ namespace IntepretadorDeNumeros.ConsoleApp1
                     break;
             }
 
-          
+
 
             // idea antiga
             //if (charParaLer2[0] == ' ' && charParaLer1[1] == ' ' && charParaLer2[3] == '|' && charParaLer3[3] == '|')
@@ -177,8 +188,13 @@ namespace IntepretadorDeNumeros.ConsoleApp1
 
             if ((contador) < linhas[1].Length) // termino os numeros? senão vai pra cima denovo
                 goto checkagem;
+            else
+            {
+                Console.WriteLine();
+                goto novo;
+            }
             #endregion
-
+            fim:
             Console.ReadKey();
 
         }
